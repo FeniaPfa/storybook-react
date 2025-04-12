@@ -13,4 +13,17 @@ export const Primary: Story = {
     style: "filled",
     label: "Button",
   },
+  argTypes: {
+    style: {
+      options: ["filled", "outlined"],
+      control: { type: "inline-radio" },
+    },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "inline-radio" },
+    },
+    label: {
+      control: { type: "text" },
+    },
+  },
 };
