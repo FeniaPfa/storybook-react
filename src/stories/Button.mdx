@@ -1,0 +1,48 @@
+import { Canvas, Meta, Controls, Story } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button Component
+
+A versatile button component that supports different styles and sizes.
+
+## Overview
+
+The Button component is a customizable button that can be styled in different ways and sizes. It's designed to be flexible and reusable across your application.
+
+## Props
+
+<Controls />
+
+## Examples
+
+### Primary Button (Default)
+
+<Canvas of={ButtonStories.Primary} />
+
+## Usage
+
+```jsx
+import { Button } from "../components/Button/Button";
+
+// Default filled button
+<Button label="Click me" />
+
+// Outlined button
+<Button style="outlined" label="Click me" />
+
+// Large outlined button
+<Button style="outlined" size="large" label="Click me" />
+```
+
+## CSS Classes
+
+The component uses the following CSS classes:
+
+- `button`: Base button class
+- `button--filled`: Style for filled button
+- `button--outlined`: Style for outlined button
+- `button--small`: Small size variant
+- `button--medium`: Medium size variant
+- `button--large`: Large size variant

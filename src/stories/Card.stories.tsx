@@ -9,6 +9,7 @@ export default meta;
 type Story = StoryObj<typeof Card>;
 
 export const Primary: Story = {
+  tags: ["autodocs"],
   args: {
     title: "Card",
     description: "Card description",
