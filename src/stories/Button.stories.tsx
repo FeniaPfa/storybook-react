@@ -3,6 +3,13 @@ import { Button } from "../components/Button/Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  decorators: [
+    (Story) => (
+      <div style={{ padding: "24px" }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
