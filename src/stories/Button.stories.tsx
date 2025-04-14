@@ -1,14 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/Button/Button";
+import { withActions } from "@storybook/addon-actions/decorator";
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  parameters: {
+    actions: { handles: ["mouseover"] },
+    backgrounds: {
+      default: "default",
+      values: [
+        { name: "blackfriday", value: "#000000" },
+        { name: "default", value: "#FFFFFF" },
+      ],
+    },
+  },
   decorators: [
     (Story) => (
       <div style={{ padding: "24px" }}>
         <Story />
       </div>
     ),
+    withActions,
   ],
 };
 
@@ -31,6 +43,9 @@ export const Primary: Story = {
     },
     label: {
       control: { type: "text" },
+    },
+    onClick: {
+      action: "clicked",
     },
   },
 };
